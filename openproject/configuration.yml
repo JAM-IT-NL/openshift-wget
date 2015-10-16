@@ -162,7 +162,7 @@ default:
   smtp_port: 587
   smtp_domain: <%= ENV['OPENSHIFT_APP_DNS'] %>
   smtp_authentication: :login
-  smtp_user_name: "martijn.raats@jam-it.nl"
+  smtp_user_name: "user@gmail.com"
   smtp_password: "password"
 
   # Prefix to the url-path. This path is then prepended to all
