@@ -651,7 +651,7 @@ class Resolv
 
     def self.bind_random_port(udpsock, bind_host="0.0.0.0") # :nodoc:
       begin
-        bind_host=ENV['OPENSHIFT_DIY_IP']
+        bind_host=ENV['OPENSHIFT_RUBY_IP']
         port = rangerand(1024..65535)
         udpsock.bind(bind_host, port)
       rescue Errno::EADDRINUSE, # POSIX
