@@ -1,4 +1,6 @@
 #!/bin/bash
+source $OPENSHIFT_CARTRIDGE_SDK_BASH
+
 export NODENV_ROOT=$OPENSHIFT_DATA_DIR/.nodenv
 export PATH="$NODENV_ROOT/bin:$PATH"
 eval "$(nodenv init -)"
