@@ -13,3 +13,5 @@ rbenv global 2.1.6
 cd $OPENSHIFT_DATA_DIR/openproject
 export RAILS_ENV="production"
 nohup passenger start --address $OPENSHIFT_DIY_IP --port 8080 --pid-file $OPENSHIFT_DATA_DIR/passenger/pid/passenger --log-file $OPENSHIFT_DATA_DIR/passenger/log/passenger |& /usr/bin/logshifter -tag diy &
+
+client_result "Passenger started"
