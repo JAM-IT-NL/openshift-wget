@@ -9,5 +9,7 @@ export PATH="$RBENV_ROOT/bin:$PATH"
 eval "$(rbenv init -)"
 rbenv rehash
 rbenv global 2.1.6
+
+cd $OPENSHIFT_DATA_DIR/openproject
 export RAILS_ENV="production"
-nohup RAILS_ENV="production" passenger start --address $OPENSHIFT_DIY_IP --port 8080 --pid-file $OPENSHIFT_DATA_DIR/passenger/pid/passenger --log-file $OPENSHIFT_DATA_DIR/passenger/log/passenger |& /usr/bin/logshifter -tag diy &
+nohup passenger start --address $OPENSHIFT_DIY_IP --port 8080 --pid-file $OPENSHIFT_DATA_DIR/passenger/pid/passenger --log-file $OPENSHIFT_DATA_DIR/passenger/log/passenger |& /usr/bin/logshifter -tag diy &
