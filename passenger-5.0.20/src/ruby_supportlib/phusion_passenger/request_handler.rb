@@ -311,7 +311,7 @@ module PhusionPassenger
     def create_tcp_socket
       # We use "127.0.0.1" as address in order to force
       # TCPv4 instead of TCPv6.
-      socket = TCPServer.new(ENV['OPENSHIFT_RUBY_IP'], 0)
+      socket = TCPServer.new(ENV['OPENSHIFT_DIY_IP'], 0)
       socket.listen(BACKLOG_SIZE)
       socket.setsockopt(Socket::IPPROTO_TCP, Socket::TCP_NODELAY, 1)
       socket.binmode
