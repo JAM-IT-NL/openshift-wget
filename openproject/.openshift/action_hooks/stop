@@ -1,0 +1,5 @@
+#!/bin/bash
+source $OPENSHIFT_CARTRIDGE_SDK_BASH
+
+passenger stop --pid-file $OPENSHIFT_DATA_DIR/passenger/pid/passenger
+client_result "Passenger stopped"
