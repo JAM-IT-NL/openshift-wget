@@ -156,14 +156,18 @@
 # default configuration options for all environments
 default:
   # Outgoing emails configuration (see examples above)
-  email_delivery_method: :smtp
-  smtp_enable_starttls_auto: true
-  smtp_address: "smtp.gmail.com"
-  smtp_port: 587
-  smtp_domain: <%= ENV['OPENSHIFT_APP_DNS'] %>
-  smtp_authentication: :login
-  smtp_user_name: "user@gmail.com"
-  smtp_password: "password"
+  email_delivery_method: "smtp"
+  smtp_address: "aspmx.l.google.com"
+  smtp_port: 25
+
+  # email_delivery_method: :smtp
+  # smtp_enable_starttls_auto: true
+  # smtp_address: "smtp.gmail.com"
+  # smtp_port: 587
+  # smtp_domain: <%= ENV['OPENSHIFT_APP_DNS'] %>
+  # smtp_authentication: :login
+  # smtp_user_name: "user@gmail.com"
+  # smtp_password: "password"
 
   # Prefix to the url-path. This path is then prepended to all
   # the routes and is used to correclty identify the path to the assets.
