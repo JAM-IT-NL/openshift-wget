@@ -1,0 +1,19 @@
+#!/bin/bash
+source $OPENSHIFT_CARTRIDGE_SDK_BASH
+
+export NODENV_ROOT=$OPENSHIFT_DATA_DIR/.nodenv
+export PATH="$NODENV_ROOT/bin:$PATH"
+eval "$(nodenv init -)"
+nodenv rehash
+nodenv global 0.12.7
+export RBENV_ROOT=$OPENSHIFT_DATA_DIR/.rbenv
+export PATH="$RBENV_ROOT/bin:$PATH"
+eval "$(rbenv init -)"
+rbenv rehash
+rbenv global 2.1.6
+
+cd $OPENSHIFT_DATA_DIR/openproject
+export RAILS_ENV="production"
+nohup bundle exec rackup -o $OPENSHIFT_DIY_IP -p 8080 --log-file $OPENSHIFT_DATA_DIR/passenger/log/passenger |& /usr/bin/logshifter -tag diy &
+
+client_result "Passenger started"
