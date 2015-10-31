@@ -1,7 +1,7 @@
 <Server port="8015" shutdown="SHUTDOWN">
 
     <Service name="Catalina">
-        <Connector port="<%= ENV['OPENSHIFT_DIY_PORT']%>" address="<%= ENV['OPENSHIFT_DIY_IP']%>"/>
+        <Connector port="OPENSHIFT_DIY_PORT" address="OPENSHIFT_DIY_IP"/>
 
         <!-- This is the optional AJP connector -->
         <Connector port="8019" protocol="AJP/1.3"/>
