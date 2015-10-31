@@ -1,4 +1,4 @@
-<Server port="8015" shutdown="SHUTDOWN">
+<Server port="-1" shutdown="SHUTDOWN">
 
     <Service name="Catalina">
         <Connector port="OPENSHIFT_DIY_PORT" address="OPENSHIFT_DIY_IP"/>
