@@ -1,0 +1,7 @@
+#!/bin/bash
+export PATH=$OPENSHIFT_DATA_DIR/jre1.8.0_65/bin:$PATH
+export JAVA_HOME="$OPENSHIFT_DATA_DIR/jre1.8.0_65"
+export ARTIFACTORY_HOME=$OPENSHIFT_DATA_DIR\artifactory-oss-4.2.0
+$ARTIFACTORY_HOME/bin/artifactoryctl start
+
+client_result "Artifactory started"
